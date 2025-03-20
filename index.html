@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structured Software Design Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <h1>Structured Software Design Tool</h1>
+            <div class="header-tools">
+                <button id="save-btn" class="btn primary">Save</button>
+                <button id="load-btn" class="btn secondary">Load</button>
+                <button id="export-btn" class="btn secondary">Export</button>
+                <button id="undo-btn" class="btn tool">Undo</button>
+                <button id="redo-btn" class="btn tool">Redo</button>
+            </div>
+        </header>
+        
+        <div class="tool-panel">
+            <div class="tool-group">
+                <h3>Design Elements</h3>
+                <button id="module-btn" class="tool-btn"><span class="icon module-icon"></span>Module</button>
+                <button id="data-flow-btn" class="tool-btn"><span class="icon arrow-icon"></span>Data Flow</button>
+                <button id="control-flow-btn" class="tool-btn"><span class="icon control-icon"></span>Control Flow</button>
+            </div>
+            
+            <div class="tool-group">
+                <h3>Actions</h3>
+                <button id="select-btn" class="tool-btn active"><span class="icon select-icon"></span>Select</button>
+                <button id="delete-btn" class="tool-btn"><span class="icon delete-icon"></span>Delete</button>
+                <button id="zoom-in-btn" class="tool-btn"><span class="icon zoom-in-icon"></span>Zoom In</button>
+                <button id="zoom-out-btn" class="tool-btn"><span class="icon zoom-out-icon"></span>Zoom Out</button>
+            </div>
+        </div>
+        
+        <div class="workspace-container">
+            <div class="design-canvas-container">
+                <div id="design-canvas" class="design-canvas"></div>
+            </div>
+        </div>
+        
+        <div id="modal-container" class="modal-container hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modal-title">Save Design</h2>
+                    <span class="close-btn">&times;</span>
+                </div>
+                <div id="modal-body" class="modal-body">
+                    <div class="form-group">
+                        <label for="design-name">Design Name:</label>
+                        <input type="text" id="design-name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="design-description">Description:</label>
+                        <textarea id="design-description" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="modal-cancel" class="btn secondary">Cancel</button>
+                    <button id="modal-save" class="btn primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
